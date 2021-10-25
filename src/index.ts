@@ -1,0 +1,1 @@
+export { ElectronStorage } from './storage';
