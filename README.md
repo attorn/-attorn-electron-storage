@@ -8,6 +8,22 @@ You can also use it in your electron projects by reading these documents and und
 
 ------------
 
+## Installation
+
+Using yarn (recommended):
+
+```
+yarn add @attorn/electron-storage
+```
+
+Or using npm:
+
+```
+npm i @attorn/electron-storage
+```
+
+------------
+
 
 #### Important
 Please note that the solutions used in this package are suggested by Ccnokes and we only converted these solutions to TypeScript and then to a package. Ccnokes links are placed in the following section due to compliance with copyright laws.
