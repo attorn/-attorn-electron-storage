@@ -66,4 +66,25 @@ export class ElectronStorage {
     this.data[key] = val;
     fs.writeFileSync(this.path, JSON.stringify(this.data));
   }
+
+
+  /**
+   * destroys an existing file in storage
+   */
+  destroy(): void {
+    fs.rmSync(this.path);
+  }
+
+
+  /**
+   * 
+   * @param configName the name of saved file
+   * @param key optional key argument. if provided, returns a specific object from the json file
+   */
+  static get(configName: string, key?: string) {
+    const userDataPath = (electron.app).getPath('userData');
+    const address = path.join(userDataPath, configName + '.json');
+    const data = parseDataFile(address);
+    return key ? data[key] : key;
+  }
 }

@@ -34,11 +34,11 @@
 import fs from 'fs';
 import { AttornElectronStorage } from '../interface';
 
-export const parseDataFile = (filePath: string, defaults: AttornElectronStorage.DefaultsType) => {
+export const parseDataFile = (filePath: string, defaults?: AttornElectronStorage.DefaultsType) => {
   try {
     return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
   }
   catch (error) {
-    return defaults;
+    return defaults || null;
   }
 }
