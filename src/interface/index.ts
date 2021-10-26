@@ -40,6 +40,6 @@ export namespace AttornElectronStorage {
    */
   export interface StorageOptObj {
     configName: string;
-    defaults: DefaultsType;
+    defaults?: DefaultsType;
   }
 }
