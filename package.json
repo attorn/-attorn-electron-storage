@@ -2,7 +2,7 @@
   "private": false,
   "name": "@attorn/electron-storage",
   "version": "2.0.0",
-  "description": "",
+  "description": "A really light wight and convenient package that has been implemented for you to manage your users data through an electron application",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
