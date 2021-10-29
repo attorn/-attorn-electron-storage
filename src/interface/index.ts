@@ -28,6 +28,7 @@ export namespace AttornElectronStorage {
    */
   export type ValueType = string | number | boolean | object;
 
+
   /**
    * A json format should be like this
    */
@@ -35,11 +36,39 @@ export namespace AttornElectronStorage {
     [name: string]: ValueType;
   }
 
+
   /**
-   * Acceptable option object type for the constructor argument
+   * All locations which can be used as the storage directory.
+   * by default we use "userData"
+   */
+  type defaultPaths = 'home' | 'appData' | 'userData' | 'cache' | 'temp' | 'exe' | 'module' | 'desktop' | 'documents' | 'downloads' | 'music' | 'pictures' | 'videos' | 'recent' | 'logs' | 'crashDumps';
+
+
+  /**
+   * @name: this is the name of the storage space you want to create.
+   *        This can be a simple name like "user-theme-preferences" (which will create the storage directly in
+   *        "defaultPath") or you can pass multiple names with forward slashes like "user/preferences/theme"
+   *        to create directories first.
+   *        Note that the last name is the file name (theme.json) and the previous names are the names of
+   *        the folders that contain it
+   *
+   * @defaults its an optional argument. you can pass an object by this argument to store that object by default
+   *
+   * @defaultPath by default. it is "userData" which is defined blow:
+   *              in Linux OS: ~/.config/<Your App Name>
+   *              in Windows OS: C:\Users\<you>\AppData\Local\<Your App Name>
+   *              in Mac OS: ~/Library/Application Support/<Your App Name>
+   *              __ but you can choose other directories (defined in "AttornElectronStorage.defaultPaths")
+   *
+   * @instantMake it is "false" by default. if "true", you will receive the storage location when you create
+   *              the instance of this class. But if it is "false", you can use the "make" method later
+   *              to create the storage
    */
   export interface StorageOptObj {
-    configName: string;
+    name: string;
     defaults?: DefaultsType;
+    defaultPath?: defaultPaths;
+    instantCreate?: boolean;
   }
+
 }
