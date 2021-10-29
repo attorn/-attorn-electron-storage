@@ -255,4 +255,4 @@ ipcMain.on('method-empty', () => {
 ```
 
 ### License
-The `@attorn/electron-storage` is [MIT Licensed](https://github.com/attorn/-attorn-electron-storage/blob/main/LICENCE)
+The `@attorn/electron-storage` is [MIT licensed](https://github.com/attorn/-attorn-electron-storage/blob/main/LICENSE)
