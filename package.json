@@ -28,9 +28,8 @@
     "attorn"
   ],
   "scripts": {
-    "build": "tsc --watch",
-    "prepare": "npm run build",
-    "release": "yarn build && npm publish"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "electron": "^15.3.0",
