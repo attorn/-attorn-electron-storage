@@ -271,4 +271,17 @@ export class ElectronStorage {
     }
 
   }
+
+
+  /**
+   * With this method you can get everything that is in a storage space (folder).
+   */
+  list(): string[] {
+    try {
+      return readdirSync(join(this.userPath, this.name));
+    }
+    catch (error) {
+      throw error
+    }
+  }
 }
