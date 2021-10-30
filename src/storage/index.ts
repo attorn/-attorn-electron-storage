@@ -99,7 +99,7 @@ export class ElectronStorage {
         }
         throw { code: 'ENOENT' }
       }
-      catch (error: any) {
+      catch (error) {
         if (error?.code === 'ENOENT') { // no such file or directory
           const folders = name.split('/');
           let userPath = this.userPath;
