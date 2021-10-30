@@ -1,7 +1,7 @@
 {
   "name": "@attorn/electron-storage",
   "author": "qafoori",
-  "version": "2.0.1",
+  "version": "2.1.1",
   "description": "A really light wight and convenient package that has been implemented for you to manage your users data through an electron application",
   "homepage": "https://github.com/attorn/-attorn-react-explorer#readme",
   "license": "MIT",
@@ -28,9 +28,8 @@
     "attorn"
   ],
   "scripts": {
-    "build": "tsc --watch",
-    "prepare": "npm run build",
-    "release": "yarn build && npm publish"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "electron": "^15.3.0",

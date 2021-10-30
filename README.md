@@ -1,3 +1,4 @@
+
 ## Getting started
 
 The `@attorm/electron-storage` package is a really light wight and convenient package that has been implemented for use in the `Attorn` projects.
@@ -78,7 +79,7 @@ You have one required configuration and three optional configurations when you a
 
 
 ### 3. When you want to use instance
-In this package, there are 9 efficient methods, the description of which you can see below:
+In this package, there are 8 efficient methods, the description of which you can see below:
 
 1. `create(): void`
 If you do not want to set the actual `instantCreate` value at the build time (constructor), you can easily call this method whenever you want. It creates the storage space you want.
@@ -251,6 +252,24 @@ ipcMain.on('method-empty', () => {
    
    store.empty();
    // { }
+});
+```
+8. `list():  string[]`
+With this method you can get everything that is in a storage space (folder).
+```ts
+import { ipcMain } from  'electron';
+import { Storage } from  '@attorm/electron-storage';
+
+ipcMain.on('method-list', () => {
+	// if you have "create.json", "read.json" and "update.json" in "examples/methods" directory.
+   const  store  =  new  Storage({
+      name:  'examples/methods',
+   });
+   
+   // by calling "list" method
+   const items = store.list();
+   // you will get:
+   // ['create.json', 'read.json', 'update.json']
 });
 ```
 
