@@ -122,8 +122,8 @@ ipcMain.on('method-read', () => {
       defaults: {
          bar: {
             foo: {
-			         baz: 'temp'
-			      }
+               baz: 'temp'
+            }
          }
       },
       instantCreate: true
