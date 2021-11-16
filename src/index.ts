@@ -22,4 +22,4 @@
 
 
 export { ElectronStorage as Storage } from './storage';
-export { AttornElectronStorage } from './interface';
+export type { AttornElectronStorage } from './interface';
